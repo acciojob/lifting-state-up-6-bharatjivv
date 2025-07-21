@@ -24,7 +24,7 @@ const App = () => {
         {/* Do not remove the main div */}
         <h1>Parent component</h1>
         <TodoList todos = {todos} handleComplete = {handleComplete}/> 
-        <Parent/>
+        {/* <Parent/> */}
     </div>
   )
 }
