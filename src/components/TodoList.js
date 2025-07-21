@@ -8,7 +8,7 @@ const TodoList = ({todos, handleComplete}) => {
       <ul>
             {
                 todos.map(todo => (
-                <li key={todo.id}>
+                <li key={todo.text}>
                     <p>{todo.text}</p>
                     {
                         !todo.completed && (
