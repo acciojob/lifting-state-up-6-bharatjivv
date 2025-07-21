@@ -7,8 +7,8 @@ import Parent from "./Parent";
 const App = () => {
   const [todos, setTodos] = useState([
     { id: 1, text: 'Learn React', completed: false },
-    { id: 2, text: 'Learn HTML', completed: false },
-    { id: 3, text: 'Learn Javascript', completed: false }
+    { id: 2, text: 'Build a React app', completed: false },
+    { id: 3, text: 'Deploy the React app', completed: false }
   ]);
 
   const handleComplete = (text) => {
