@@ -11,13 +11,18 @@ const App = () => {
     { id: 3, text: 'Deploy the React app', completed: false }
   ]);
 
-  const handleComplete = (text) => {
-    setTodos((prevTodos) => {
-      const updated = prevTodos.map(todo => todo.text === text ? {...todo, completed: true } : todo);
-      console.log("updated todos : ", updated)
-      return updated;
-    });
-  };
+  // const handleComplete = (text) => {
+  //   setTodos((prevTodos) => {
+  //     const updated = prevTodos.map(todo => todo.text === text ? {...todo, completed: true } : todo);
+  //     console.log("updated todos : ", updated)
+  //     return updated;
+  //   });
+  // };
+
+  const handleComplete=(text)=>{
+       const reWrite=todos.map(each=>each.text===text?{text:each.text,completed:true}:each)
+       setTodos(reWrite)
+    }
   
   return (
     <div>
