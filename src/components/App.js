@@ -11,7 +11,7 @@ const App = () => {
     { id: 3, text: 'Learn Javascript', completed: false }
   ]);
 
-  const handleComplete = (id) => {
+  const handleComplete = (text) => {
     setTodos((prevTodos) => {
       const updated = prevTodos.map(todo => todo.text === text ? {...todo, completed: true } : todo);
       console.log("updated todos : ", updated)
