@@ -12,7 +12,7 @@ const TodoList = ({todos, handleComplete}) => {
                     <p>{todo.text}</p>
                     {
                         !todo.completed && (
-                            <button onClick={() => handleComplete(todo.id)}>Complete</button>
+                            <button onClick={() => handleComplete(todo.text)}>Complete</button>
                         )
                     }
                 </li>
