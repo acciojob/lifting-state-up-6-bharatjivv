@@ -8,9 +8,9 @@ const TodoList = ({todos, handleComplete}) => {
             {
               todos.map(each => {
                 return (
-                  <li key={each.text}>
+                  <li key={each.id}>
                     <p>{each.text}</p>
-                    {!each.completed && <button onClick={() => handleComplete(each.text)}>Completed</button>}
+                    {!each.completed && <button onClick={() => handleComplete(each.id)}>Completed</button>}
 
                   </li>
                 )

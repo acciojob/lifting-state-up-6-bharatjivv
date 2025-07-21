@@ -21,8 +21,8 @@ const App = () => {
   //   });
   // };
 
-  const handleComplete=(text)=>{
-      const reWrite=todos.map(each=>each.text===text?{text:each.text, completed:true}:each)
+  const handleComplete=(id)=>{
+      const reWrite=todos.map(todo=>todo.id===id?{...todo, completed:true}: todo)
       setTodos(reWrite)
   }
   
