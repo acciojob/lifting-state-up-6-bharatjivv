@@ -4,12 +4,14 @@ import './../styles/App.css';
 import TodoList from "./TodoList";
 import Parent from "./Parent";
 
-const App = () => {
-  const [todos, setTodos] = useState([
+const todoList = [
     { id: 1, text: 'Learn React', completed: false },
     { id: 2, text: 'Build a React app', completed: false },
     { id: 3, text: 'Deploy the React app', completed: false }
-  ]);
+]
+
+const App = () => {
+    const [todos, setTodos] = useState(todoList);
 
   // const handleComplete = (text) => {
   //   setTodos((prevTodos) => {
@@ -20,9 +22,9 @@ const App = () => {
   // };
 
   const handleComplete=(text)=>{
-       const reWrite=todos.map(each=>each.text===text?{text:each.text,completed:true}:each)
-       setTodos(reWrite)
-    }
+      const reWrite=todos.map(each=>each.text===text?{text:each.text, completed:true}:each)
+      setTodos(reWrite)
+  }
   
   return (
     <div>
